@@ -19,9 +19,9 @@ void enterBookInfo() {
         printf("Mã sách: ");
         scanf("%s", books[i].bookID);
         printf("Tên sách: ");
-        scanf(" %[^\n]", books[i].bookName);
+        scanf(" %s", books[i].bookName);
         printf("Tác giả: ");
-        scanf(" %[^\n]", books[i].author);
+        scanf(" %s", books[i].author);
         printf("Giá tiền: ");
         scanf("%f", &books[i].price);
         printf("Thể loại: ");
@@ -76,6 +76,8 @@ int main() {
             case 3:
                 displayBookInfo();
                 break;
+            case 4:
+                exit(0);
         }
     } while(choice != 4);
 
